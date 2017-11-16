@@ -114,12 +114,10 @@ public class TechJobs {
             System.out.println("No Matching Jobs");
         }
         else {
-            for (HashMap job : someJobs) {
+            for (HashMap<String, String> job : someJobs) {
                 System.out.println("\n*****\n");
-                Iterator it = job.entrySet().iterator();
-                while (it.hasNext()) {
-                    Map.Entry items = (Map.Entry) it.next();
-                    System.out.println(items.getKey() + ": " + items.getValue());
+                for (Map.Entry<String, String> row : job.entrySet()) {
+                    System.out.println(row.getKey() + ": " + row.getValue());
                 }
                 System.out.println("\n*****\n");
             }
